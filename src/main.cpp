@@ -37,6 +37,7 @@ $execute {
 			return ListenerResult::Propagate;
 		}
 		auto newRPC = newRPCRes.unwrap();
+		/*
 		gdrpc::GDRPC::getSharedInstance()->updateDiscordRP(
 			newRPC["modID"].asString().unwrapOr(""),
 			newRPC["details"].asString().unwrapOr(""),
@@ -51,6 +52,24 @@ $execute {
 			newRPC["largeImageText"].asString().unwrapOr(""),
 			newRPC["partyMax"].asInt().unwrapOr(1)
 		);
+		*/
+		// gdrpc::GDRPC::updateDiscordRP("DindeGDPS", "dgdps.us.to", "logo", "Join DindeGDPS!", true, false, "logo");
+
+		gdrpc::GDRPC::getSharedInstance()->updateDiscordRP(
+			newRPC["modID"].asString().unwrapOr(""),
+			"DindeGDPS",
+			"dgdps.us.to",
+			"logo",
+			"Playing DindeGDPS",
+			true,
+			false,
+			"logo",
+			0,
+			newRPC["joinSecret"].asString().unwrapOr(""),
+			"Join us on DindeGDPS!",
+			newRPC["partyMax"].asInt().unwrapOr(1)
+		);
+		
 		return ListenerResult::Propagate;
 	}, NewRPCFilter("update_rpc"_spr));
 
