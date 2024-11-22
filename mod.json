@@ -1,9 +1,9 @@
 {
-	"geode": "4.0.0-alpha.1",
+	"geode": "4.0.1",
 	"version": "v3.0.0",
-	"id": "techstudent10.discord_rich_presence",
+	"id": "techstudent10.dinde_discord_rich_presence",
 	"name": "Discord Rich Presence",
-	"developer": "TechStudent10",
+	"developer": "TechStudent10 (Jean edit)",
 	"description": "A Discord Rich Presence mod for Geode",
 	"gd": {
 		"win": "2.2074",
